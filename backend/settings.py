@@ -4,7 +4,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-default-key')
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # React build static files
