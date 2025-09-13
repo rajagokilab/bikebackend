@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ['*']
 # settings.py
 STATIC_URL = '/assets/'
 STATICFILES_DIRS = [
-    BASE_DIR.parent / "frontend" / "dist"
+    BASE_DIR / "frontend",  # backend/frontend
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
