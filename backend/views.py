@@ -23,9 +23,11 @@ from pathlib import Path
 
 class FrontendAppView(View):
     def get(self, request, *args, **kwargs):
-        build_index = Path(__file__).resolve().parent / "frontend" / "index.html"
+        # backend/backend/views.py + frontend/index.html
+        build_index = Path(__file__).resolve().parent.parent / "frontend" / "index.html"
+        
         print("Looking for React build at:", build_index)
-
+        
         if build_index.exists():
             with open(build_index, encoding="utf-8") as f:
                 return HttpResponse(f.read())
